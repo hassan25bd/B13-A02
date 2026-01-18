@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.brand h2{
+    font-family:"Archivo Black";
+    font-size: 30px;
+    font-weight: 900;
+    color: azure;
+}
+.color {
+  background: linear-gradient(to bottom, #26c1cf, #8edb31, #f9eb3a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-family: 'Arial Black', sans-serif;
+  font-weight: 900;
+  display: inline-block;
+}
+
+.btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(47.64deg, rgb(71, 245, 109), rgb(251, 166, 9), rgb(248, 0, 0));
+    border: none;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+header{
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(65, 37, 103, 1);
+    background: rgb(51, 20, 92);
+}
+
+nav{
+    width: 60%;
+    max-width: 1140px;
+    margin: 0 auto; 
+    padding: 20px 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .menu{
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+    align-items: center;
+}
+
+nav .menu li{
+    font-size: 20px;
+    text-decoration: none;
+    color: aliceblue;
+}
