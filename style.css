@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .brand h2{
@@ -92,4 +93,124 @@ nav .menu li{
 nav .menu li:hover{
     color: #fff;
     background: linear-gradient(47.64deg, rgb(71, 245, 109), rgb(251, 166, 9), rgb(248, 0, 0));;
+}
+
+.custom-hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #18122B;
+    overflow: hidden;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background: url(./assets/hero-bg.png) center center/cover no-repeat;
+    opacity: 0.7;
+    z-index: 0;
+}
+.hero-centerpiece {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin-bottom: 32px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-circle {
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.hero-mic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.custom-hero-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    z-index: 2;
+}
+.custom-hero-subtitle {
+    color: #d1d5db;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+.btn-spotify {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #00fff2, #8edb31, #f9eb3a);
+    gap: 10px;
+    padding: 0.85rem 2.2rem;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.15rem;
+    box-shadow: 0 2px 8px #0003;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-subscribe {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.85rem 2.2rem;
+    border-radius: 999px;
+    border: 2px solid #00ff94;
+    color: #00ff94;
+    font-weight: 600;
+    font-size: 1.15rem;
+    background: transparent;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s, transform 0.15s;
+    outline: none;
+}
+.custom-hero-btns{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    z-index: 2;
+}
+
+.badge-new {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: #00ff94;
+    color: #18122B;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 2px 18px 2px 18px;
+    border-radius: 16px 16px 16px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    z-index: 3;
+    letter-spacing: 0.5px;
+    border: none;
+    line-height: 1.7;
+    font-family: 'Archivo Black', sans-serif;
+    transition: box-shadow 0.2s;
 }
