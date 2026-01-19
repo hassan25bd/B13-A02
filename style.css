@@ -127,6 +127,29 @@ nav .menu li:hover{
     align-items: center;
     justify-content: center;
 }
+.hero-centerpiece::before,
+.hero-centerpiece::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border: 3px solid #6b4a9e;
+    border-radius: 50%;
+    animation: pulseOutCircle 2s ease-out infinite;
+    opacity: 0;
+}
+.hero-centerpiece::after {
+    animation-delay: 1s;
+}
+@keyframes pulseOutCircle {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.15);
+        opacity: 0;
+    }
+}
 .hero-circle {
     width: 320px;
     height: 320px;
@@ -158,6 +181,7 @@ nav .menu li:hover{
     z-index: 2;
 }
 .btn-spotify {
+    position: relative;
     display: inline-flex;
     align-items: center;
     background: linear-gradient(to bottom, #00fff2, #8edb31, #f9eb3a);
@@ -171,7 +195,23 @@ nav .menu li:hover{
     text-decoration: none;
     border: none;
 }
-
+.btn-spotify::before,
+.btn-spotify::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border: 2px solid #00ff94;
+    border-radius: inherit;
+    animation: pulseOut 2s ease-out infinite;
+    opacity: 0;
+}
+.btn-spotify::after {
+    animation-delay: 1s;
+}
+.btn-spotify:hover {
+    box-shadow: 0 4px 12px #0005;
+    transform: translateY(-2px);
+}
 .btn-subscribe {
     display: inline-flex;
     align-items: center;
@@ -187,6 +227,12 @@ nav .menu li:hover{
     transition: background 0.15s, color 0.15s, transform 0.15s;
     outline: none;
 }
+.btn-subscribe:hover {
+    background: #00ff94;
+    color: #18122B;
+    transform: translateY(-2px);
+    visibility: hidden;
+}
 .custom-hero-btns{
     display: flex;
     gap: 1.5rem;
@@ -194,7 +240,7 @@ nav .menu li:hover{
     z-index: 2;
 }
 
-.badge-new {
+.badge-new{
     position: absolute;
     top: 18px;
     right: 18px;
@@ -240,8 +286,6 @@ nav .menu li:hover{
     opacity: 0;
   }
 }
-
-/* Why Choose TechWave Section - Card Grid Layout */
 #service-box {
   background: rgba(35, 14, 61, 1);
   color: #ffffff;
@@ -458,7 +502,6 @@ nav .menu li:hover{
   }
 }
 
-/* Meet The Host Section */
 #meet-host {
   background: #1a0b2e;
   padding: 60px 0 80px 0;
