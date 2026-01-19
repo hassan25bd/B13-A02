@@ -214,3 +214,96 @@ nav .menu li:hover{
     font-family: 'Archivo Black', sans-serif;
     transition: box-shadow 0.2s;
 }
+.badge-new:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.badge-new::before,
+.badge-new::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid rgb(255, 238, 0);
+  border-radius: inherit;
+  animation: pulseOut 2s ease-out infinite;
+  opacity: 0;
+}
+
+.badge-new::after {
+  animation-delay: 1s;
+}
+
+@keyframes pulseOut {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Why Choose TechWave Section - Card Grid Layout */
+#service-box {
+  background: #181028;
+  color: #fff;
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+#service-box .section-heading h1 {
+  font-size: 2.7rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.service-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.service-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 0;
+}
+.servive-card {
+  background: #24163a;
+  border-radius: 30px;
+  flex: 1 1 350px;
+  min-width: 320px;
+  max-width: 500px;
+  padding: 36px 32px 32px 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 0;
+  text-align: left;
+}
+.servive-card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+.servive-card h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+.servive-card p {
+  font-size: 1rem;
+  color: #d1cbe5;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .service-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .servive-card {
+    max-width: 95vw;
+    min-width: 0;
+  }
+}
