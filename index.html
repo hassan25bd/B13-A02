@@ -100,5 +100,109 @@
           </div>
         </div>
       </section>
+        <section id="featured-episodes">
+          <div class="episodes-container">
+            <h2 class="episodes-title">Featured Episodes</h2>
+            <div class="episodes-grid">
+              <div class="episode-card">
+                <div class="episode-thumbnail">
+                  <video controls src="./video/Erika [German soldier love song][+English translation].mp4"></video>
+                  <div class="play-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+                  </div>
+                </div>
+                <div class="episode-info">
+                  <h3>The Future of AI in Everyday Life</h3>
+                  <p>Exploring how artificial intelligence is transforming our daily routines and what to expect in the next decade.</p>
+                  <span class="episode-duration"><img src="./assets/clock.png" alt=""> 42 min</span>
+                </div>
+              </div>
+              <div class="episode-card">
+                <div class="episode-thumbnail">
+                  <video controls src="./video/Gryffin - Just For A Moment ft. Iselin.mp4"></video>
+                  <div class="play-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+                  </div>
+                </div>
+                <div class="episode-info">
+                  <h3>Building Better Habits for Remote Work</h3>
+                  <p>Practical strategies for staying productive and maintaining work-life balance in a remote environment.</p>
+                  <span class="episode-duration"><img src="./assets/clock.png" alt=""> 35 min</span>
+                </div>
+              </div>
+              <div class="episode-card">
+                <div class="episode-thumbnail">
+                  <video controls src="./video/Xiao Feng Feng - Learn To Meow (小潘潘 - 學貓叫) OFFICIAL MV.mkv"></video>
+                  <div class="play-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+                  </div>
+                </div>
+                <div class="episode-info">
+                  <h3>Career Growth in Tech: A Roadmap</h3>
+                  <p>Expert advice on navigating your tech career from junior developer to senior leadership roles.</p>
+                  <span class="episode-duration"><img src="./assets/clock.png" alt=""> 51 min</span>
+                </div>
+              </div>
+            </div>
+          </div>     
+        </section>
+        <section id="meet-host">
+          <div class="host-container">
+            <h2 class="host-title">Meet The Host</h2>
+            <div class="host-card">
+              <div class="host-image">
+                <img src="./assets/host.png" alt="Alex Kumar">
+              </div>
+              <div class="host-info">
+                <h3>Alex Kumar</h3>
+                <p>Tech entrepreneur, productivity expert, and lifelong learner. Alex has been in the tech industry for over 10 years, working with startups and Fortune 500 companies. Through TechWave, Alex shares insights from industry leaders and practical advice for anyone looking to grow in tech.</p>
+                <div class="host-socials">
+                  <a href="#" class="social-icon linkedin"><img src="./assets/linkedin.png" alt="LinkedIn"></a>
+                  <a href="#" class="social-icon twitter"><img src="./assets/twitter.png" alt="Twitter"></a>
+                  <a href="#" class="social-icon instagram"><img src="./assets/instagram.png" alt="Instagram"></a>
+                  <a href="#" class="social-icon youtube"><img src="./assets/youtube.png" alt="YouTube"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="site-footer">
+          <div class="footer-waves">
+            <div class="wave-left"></div>
+            <div class="wave-right"></div>
+          </div>
+          <div class="footer-content">
+            <h2 class="footer-logo">Tech<span>Wave</span></h2>
+            <div class="footer-links">
+              <a href="#" class="footer-link"><img src="./assets/spotify.png" alt=""> Spotify</a>
+              <a href="#" class="footer-link"><img src="./assets/apple-podcast.png" alt=""> Apple Podcasts</a>
+              <a href="#" class="footer-link"><img src="./assets/youtube.png" alt=""> YouTube</a>
+              <a href="#" class="footer-link"><img src="./assets/twitter.png" alt=""> Twitter</a>
+            </div>
+            <p class="footer-copyright">© 2026 TechWave Podcast. All rights reserved.</p>
+          </div>
+        </footer>
+
+        <!-- This script is taken from Google. First try-->
+        <script>
+          document.querySelectorAll('.play-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+              const video = this.parentElement.querySelector('video');
+              if (video) {
+                video.play();
+                this.style.display = 'none';
+              }
+            });
+          });
+          document.querySelectorAll('.episode-thumbnail video').forEach(video => {
+            video.addEventListener('pause', function() {
+              this.parentElement.querySelector('.play-btn').style.display = 'flex';
+            });
+            video.addEventListener('ended', function() {
+              this.parentElement.querySelector('.play-btn').style.display = 'flex';
+            });
+          });
+        </script>
+         <!-- This script is taken from Google. -->
   </body>
 </html>
